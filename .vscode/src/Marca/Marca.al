@@ -24,6 +24,8 @@ table 50113 "Marca"
             DataClassification = ToBeClassified;
             BlankZero = true;
 
+
+
         }
         field(4; "Bloqueado"; Boolean)
         {
