@@ -1,6 +1,6 @@
-page 50114 "Marca List"
+page 50116 "Marca Card"
 {
-    PageType = List;
+    PageType = Card;
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = "Marca";
@@ -53,5 +53,4 @@ page 50114 "Marca List"
             }
         }
     }
-
 }

@@ -1,6 +1,6 @@
-page 50113 "Sabor List"
+page 50115 "Sabor Card"
 {
-    PageType = List;
+    PageType = Card;
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = "Sabor";
@@ -45,5 +45,4 @@ page 50113 "Sabor List"
             }
         }
     }
-
 }

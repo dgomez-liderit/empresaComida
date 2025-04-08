@@ -1,4 +1,4 @@
-table 50101 "Sabor"
+table 50114 "Sabor"
 {
     DataClassification = ToBeClassified;
     LookupPageId = "Sabor List";
