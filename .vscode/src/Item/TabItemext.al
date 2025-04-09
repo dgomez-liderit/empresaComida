@@ -7,12 +7,7 @@ tableextension 50104 "Table Item Extension" extends "Item"
             Caption = 'Sabor producto';
             DataClassification = ToBeClassified;
             TableRelation = "Sabor";
-        }
-        field(1004; "Descripcion Sabor"; Text[100])
-        {
-            Caption = 'Descripcion Sabor';
-            DataClassification = ToBeClassified;
-            TableRelation = "Sabor";
+
             trigger OnValidate()
             var
                 SaborRec: Record "Sabor";
@@ -22,6 +17,13 @@ tableextension 50104 "Table Item Extension" extends "Item"
                         "Descripcion Sabor" := SaborRec." Descripcion Sabor";
                 end;
             end;
+        }
+        field(1004; "Descripcion Sabor"; Text[100])
+        {
+            Caption = 'Descripcion Sabor';
+            DataClassification = ToBeClassified;
+            TableRelation = "Sabor";
+
 
 
         }
@@ -31,6 +33,15 @@ tableextension 50104 "Table Item Extension" extends "Item"
             DataClassification = ToBeClassified;
             TableRelation = "Marca";
 
+            trigger OnValidate()
+            var
+                MarcaRec: Record "Marca";
+            begin
+
+                if MarcaRec.Get("Marca") then
+                    "Descripcion Marca" := MarcaRec."Descripcion Marca";
+
+            end;
 
 
         }
@@ -40,15 +51,7 @@ tableextension 50104 "Table Item Extension" extends "Item"
             DataClassification = ToBeClassified;
             TableRelation = "Marca";
             Editable = false;
-            trigger OnValidate()
-            var
-                MarcaRec: Record "Marca";
-            begin
-                if "Marca" <> '' then begin
-                    if MarcaRec.Get("Marca") then
-                        "Descripcion Marca" := MarcaRec."Descripcion Marca";
-                end;
-            end;
+
 
         }
 
